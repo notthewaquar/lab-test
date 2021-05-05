@@ -1,0 +1,70 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav 
+  #sidenav
+  mode="over"
+  [(opened)]="opened"
+  (opened)="events.push('open!')"
+  (closed)="events.push('close!')">
+    <mat-toolbar>
+      Menu
+    </mat-toolbar>
+    <mat-nav-list>
+      <a 
+        mat-list-item
+        routerLinkActive="active"
+        routerLink="/all-samples"
+        (click)="sidenav.toggle()">
+        <i class="fas fa-folder-plus"></i>
+        &nbsp;&nbsp;
+        All Samples
+      </a>
+      <a 
+        mat-list-item
+        routerLinkActive="active" 
+        routerLink="/account"
+        (click)="sidenav.toggle()">
+        <i class="fas fa-cubes"></i>
+        &nbsp;&nbsp;
+        Account
+      </a>
+      <a 
+        mat-list-item
+        (click)="onLogout()">
+        <i class="fas fa-power-off"></i>
+        &nbsp;&nbsp;
+        Logout
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="sidenav.toggle()">
+        <i class="fa fa-bars"></i>
+      </button>
+      <span class="navbar-brand" routerLink="">
+        SAMPLE TESTING
+        <!-- <br>
+        <small>...</small> -->
+      </span>
+      <div style="margin-left: auto;" class="nav-menu-link">
+        <a
+          mat-raised-button
+          routerLinkActive="active"
+          routerLink="/all-samples">
+          Sample List
+        </a>
+        <a
+          mat-raised-button
+          routerLinkActive="active" 
+          routerLink="/account">
+          Account
+        </a>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

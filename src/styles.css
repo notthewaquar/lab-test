@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+html,
+body {
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+p,
+span,
+th,
+td {
+  font-weight: 500;
+}

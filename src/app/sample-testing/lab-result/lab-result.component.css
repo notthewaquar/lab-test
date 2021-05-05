@@ -1,0 +1,38 @@
+table {
+  width: 100%;
+}
+th {
+  min-width: 60px;
+  white-space: pre;
+  padding: 0 10px !important;
+  font-size: 16px;
+}
+td {
+  min-width: 60px;
+  padding: 0 10px !important;
+}
+.col-btn{
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.col-SUCCESS {
+  color: #000;
+  background: #3faf4b;
+}
+.col-PENDING {
+  color: #fff;
+  background: #10ac84;
+}
+.col-AWAITED {
+  color: #fff;
+  background: #ff6300;
+}
+.col-DENIED {
+  color: #fff;
+  background: #ec1b30;
+}
+.col-REJECTED {
+  color: #fff;
+  background: #576474;
+}

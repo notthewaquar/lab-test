@@ -1,0 +1,60 @@
+<form [formGroup]="labTestForm" (ngSubmit)="submitForm()">
+<mat-card class="m-2">
+  <h1>Add Lab Data</h1>
+  <div class="row">
+    <mat-form-field class="col-12">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="col-md-6 col-12">
+      <mat-label>Reading A</mat-label>
+      <input matInput formControlName="readingA">
+    </mat-form-field>
+    <mat-form-field class="col-md-6 col-12">
+      <mat-label>Reading B</mat-label>
+      <input matInput formControlName="readingB">
+    </mat-form-field>
+    <mat-form-field class="col-md-6 col-12">
+      <mat-label>Category A</mat-label>
+      <mat-select formControlName="categoryA">
+        <mat-option value="1">Class I</mat-option>
+        <mat-option value="2">Class II</mat-option>
+        <mat-option value="3">Class III</mat-option>
+        <mat-option value="4">Class IV</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col-md-6 col-12">
+      <mat-label>Category B</mat-label>
+      <mat-select formControlName="categoryB">
+        <mat-option value="1">Class I</mat-option>
+        <mat-option value="2">Class II</mat-option>
+        <mat-option value="3">Class III</mat-option>
+        <mat-option value="4">Class IV</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col-12">
+      <mat-label>comment</mat-label>
+      <textarea rows="5" matInput formControlName="comment"></textarea>
+    </mat-form-field>
+    <mat-form-field class="col-12">
+      <h5>Assign Tester</h5>
+      <mat-label></mat-label>
+      <mat-select formControlName="tester">
+        <mat-option value="testerA">Tester A</mat-option>
+        <mat-option value="testerB">Tester B</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="col-md-6 col-12">
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary">Add Data</button>
+    </div>
+    <!-- <div class="col-md-6 col-12 text-right">
+      <button
+        mat-raised-button
+        color="warn">Reset</button>
+    </div> -->
+  </div>
+</mat-card>
+</form>

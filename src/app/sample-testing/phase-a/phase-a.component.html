@@ -1,0 +1,25 @@
+<h1 class="m-2">Testing Phase A</h1>
+<mat-card class="m-2">
+  <h3>{{ labData.title }}</h3>
+  <p>Reading A: {{ labData.readingA }}</p>
+  <p>Reading B: {{ labData.readingB }}</p>
+  <p>Category A: {{ labData.categoryA }}</p>
+  <p>Category B: {{ labData.categoryB }}</p>
+  <p>Comment: {{ labData.comment }}</p>
+</mat-card>
+<form [formGroup]="phaseATestForm" (ngSubmit)="submitForm()">
+  <mat-card class="m-2">
+    <mat-form-field class="col-12">
+      <h3>Result <small>(for phase A)</small></h3>
+      <mat-label>.</mat-label>
+      <mat-select formControlName="resultA">
+        <mat-option value="SUCCESS">SUCCESS</mat-option>
+        <mat-option value="PENDING">PENDING</mat-option>
+        <mat-option value="AWAITED">AWAITED</mat-option>
+        <mat-option value="DENIED">DENIED</mat-option>
+        <mat-option value="REJECTED">REJECTED</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+  </mat-card>
+</form>

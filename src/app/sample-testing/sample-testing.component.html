@@ -1,0 +1,37 @@
+<mat-card class="m-2">
+  <mat-accordion>
+    <div *ngIf="labSamples.length < 1">No Samples</div>
+    <mat-expansion-panel hideToggle *ngFor="let item of labSamples; let i = index">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ item.title }}
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          This is a summary of the content
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <p>Reading A: {{ item.readingA }}</p>
+      <p>Reading B: {{ item.readingB }}</p>
+      <p>Category A: {{ item.categoryA }}</p>
+      <p>Category B: {{ item.categoryB }}</p>
+      <p>Comment: {{ item.comment }}</p>
+      <button
+        type="button"
+        (click)="startTest(i)"
+        mat-raised-button
+        color="primary"
+      >
+        Start Testing
+      </button>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <button
+    type="button"
+    (click)="fetchAllData()"
+    mat-raised-button
+    color="primary"
+  >
+    Fetch Data
+  </button>
+</mat-card>

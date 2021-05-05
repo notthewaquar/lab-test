@@ -1,0 +1,43 @@
+<mat-card>
+  <div class="table-div">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+        <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+      </ng-container>
+      <ng-container matColumnDef="readingA">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Reading A</th>
+        <td mat-cell *matCellDef="let element">{{ element.readingA }}</td>
+      </ng-container>
+      <ng-container matColumnDef="readingB">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Reading B</th>
+        <td mat-cell *matCellDef="let element">{{ element.readingB }}</td>
+      </ng-container>
+      <ng-container matColumnDef="categoryA">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Category B</th>
+        <td mat-cell *matCellDef="let element">{{ element.categoryA }}</td>
+      </ng-container>
+      <ng-container matColumnDef="categoryB">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Category B</th>
+        <td mat-cell *matCellDef="let element">{{ element.categoryB }}</td>
+      </ng-container>
+      <ng-container matColumnDef="comment">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Comment</th>
+        <td mat-cell *matCellDef="let element">{{ element.comment }}</td>
+      </ng-container>
+      <ng-container matColumnDef="tester">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Tester</th>
+        <td mat-cell *matCellDef="let element">{{ element.tester }}</td>
+      </ng-container>
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+        <td mat-cell *matCellDef="let element">
+          <span class="col-btn col-{{element.status}}">{{ element.status }}</span>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</mat-card>
